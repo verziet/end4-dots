@@ -98,11 +98,11 @@ Scope {
                 Keys.onPressed: (event) => {
                     if (event.key === Qt.Key_Escape) {
                         GlobalStates.overviewOpen = false;
-                    } else if (event.key === Qt.Key_Left) {
-                        if (!root.searchingText) Hyprland.dispatch("workspace r-1");
-                    } else if (event.key === Qt.Key_Right) {
-                        if (!root.searchingText) Hyprland.dispatch("workspace r+1");
-                    }
+                    } // else if (event.key === Qt.Key_Left) {
+                    //    if (!root.searchingText) Hyprland.dispatch("workspace r-1");
+                    //} else if (event.key === Qt.Key_Right) {
+                    //    if (!root.searchingText) Hyprland.dispatch("workspace r+1");
+                    //}
                 }
 
                 Item {
@@ -118,14 +118,14 @@ Scope {
                     }
                 }
 
-                Loader {
-                    id: overviewLoader
-                    active: GlobalStates.overviewOpen
-                    sourceComponent: OverviewWidget {
-                        panelWindow: root
-                        visible: (root.searchingText == "")
-                    }
-                }
+                //Loader {
+                //    id: overviewLoader
+                //    active: GlobalStates.overviewOpen
+                //    sourceComponent: OverviewWidget {
+                //        panelWindow: root
+                //        visible: (root.searchingText == "")
+                //    }
+                //}
             }
 
         }
