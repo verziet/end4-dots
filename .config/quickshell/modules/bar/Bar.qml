@@ -161,16 +161,6 @@ Scope {
                         anchors.fill: parent
                         implicitHeight: leftSectionRowLayout.implicitHeight
                         implicitWidth: leftSectionRowLayout.implicitWidth
-
-                        ScrollHint {
-                            reveal: barLeftSideMouseArea.hovered
-                            icon: "light_mode"
-                            tooltipText: qsTr("Scroll to change brightness")
-                            side: "left"
-                            anchors.left: parent.left
-                            anchors.verticalCenter: parent.verticalCenter
-                            
-                        }
                         
                         RowLayout { // Content
                             id: leftSectionRowLayout
@@ -371,15 +361,6 @@ Scope {
                         anchors.fill: parent
                         implicitHeight: rightSectionRowLayout.implicitHeight
                         implicitWidth: rightSectionRowLayout.implicitWidth
-                        
-                        ScrollHint {
-                            reveal: barRightSideMouseArea.hovered
-                            icon: "volume_up"
-                            tooltipText: qsTr("Scroll to change volume")
-                            side: "right"
-                            anchors.right: parent.right
-                            anchors.verticalCenter: parent.verticalCenter
-                        }
 
                         RowLayout {
                             id: rightSectionRowLayout

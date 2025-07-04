@@ -72,6 +72,14 @@ Item { // Wrapper
                 Todo.addTask(args)
             }
         },
+        {
+            action: "switch user",
+            execute: (args) => {
+                executor.executeCommand(
+                    `home-manager switch --flake /home/verz/newsystem`
+                )
+            }
+        },
     ]
 
     function focusFirstItemIfNeeded() {
@@ -154,8 +162,8 @@ Item { // Wrapper
             event.text &&
             event.text.length === 1 &&
             event.key !== Qt.Key_Enter &&
-            event.key !== Qt.Key_Return &&
-            event.text.charCodeAt(0) >= 0x20 // ignore control chars like Backspace, Tab, etc.
+            event.key !== Qt.Key_Return //&&
+            //event.text.charCodeAt(0) >= 0x20 // ignore control chars like Backspace, Tab, etc.
         ) {
             if (!searchInput.activeFocus) {
                 searchInput.forceActiveFocus();
